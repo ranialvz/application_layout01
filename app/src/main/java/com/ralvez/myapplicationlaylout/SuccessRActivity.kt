@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.ralvez.myapplicationlaylout.databinding.ActivitySuccessRBinding
 
-class SuccessR_Activity : AppCompatActivity() {
+class SuccessRActivity : AppCompatActivity() {
     private lateinit var binding : ActivitySuccessRBinding
 
 
@@ -15,7 +15,7 @@ class SuccessR_Activity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.tvLogin.setOnClickListener {
-            val intent = Intent(this, Login_Activity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
         val actionbar = supportActionBar

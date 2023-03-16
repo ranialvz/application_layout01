@@ -6,7 +6,7 @@ import android.os.Bundle
 import com.ralvez.myapplicationlaylout.databinding.ActivityLoginBinding
 
 
-class Login_Activity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityLoginBinding
 
@@ -17,7 +17,7 @@ class Login_Activity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.tvSignup.setOnClickListener {
-            val intent = Intent(this, Signup_Activity::class.java)
+            val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
         val actionbar = supportActionBar

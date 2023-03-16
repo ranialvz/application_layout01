@@ -10,7 +10,7 @@ import com.ralvez.myapplicationlaylout.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
-       // test
+       // test github
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,11 +18,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnLogin.setOnClickListener {
-            val intent = Intent(this, Signup_Activity::class.java)
+            val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
         binding.tvLogin.setOnClickListener {
-            val intent = Intent(this, Login_Activity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
 
