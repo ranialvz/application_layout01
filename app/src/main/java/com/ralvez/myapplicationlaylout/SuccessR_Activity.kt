@@ -3,21 +3,19 @@ package com.ralvez.myapplicationlaylout
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.ralvez.myapplicationlaylout.databinding.ActivityLoginBinding
+import com.ralvez.myapplicationlaylout.databinding.ActivitySuccessRBinding
 
-
-class Login : AppCompatActivity() {
-
-    private lateinit var binding : ActivityLoginBinding
+class SuccessR_Activity : AppCompatActivity() {
+    private lateinit var binding : ActivitySuccessRBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
+        binding = ActivitySuccessRBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.tvSignup.setOnClickListener {
-            val intent = Intent(this, Signup::class.java)
+        binding.tvLogin.setOnClickListener {
+            val intent = Intent(this, Login_Activity::class.java)
             startActivity(intent)
         }
         val actionbar = supportActionBar
@@ -31,8 +29,6 @@ class Login : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
-
-
 
 
     }
