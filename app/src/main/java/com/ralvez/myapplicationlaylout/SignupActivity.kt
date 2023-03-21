@@ -17,8 +17,15 @@ class SignupActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnSignup.setOnClickListener {
-            val intent = Intent(this, SuccessRActivity::class.java)
-            startActivity(intent)
+
+            val name= binding.etName.text.toString()
+            val email= binding.etEmail.text.toString()
+
+            Intent(this, SuccessRActivity::class.java).also {
+                it.putExtra("EXTRA_NAME",name)
+                it.putExtra("EXTRA_EMAIL",email)
+            startActivity(it)
+            }
         }
         binding.tvLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)

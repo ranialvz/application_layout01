@@ -14,6 +14,11 @@ class SuccessRActivity : AppCompatActivity() {
         binding = ActivitySuccessRBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val name = intent.getStringExtra("EXTRA_NAME")
+        val email = intent.getStringExtra("EXTRA_EMAIL")
+        val person = "Name: $name\nEmail: $email"
+        binding.tvEmail.text = person
+
         binding.tvLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)

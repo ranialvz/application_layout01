@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
         }
+        binding.bntActivity.setOnClickListener {
+            val intent = Intent(this, DataformActivity::class.java)
+            startActivity(intent)
+        }
         binding.tvLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
